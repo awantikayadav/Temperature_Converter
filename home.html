@@ -1,0 +1,127 @@
+<html>
+    <style>
+        * {
+    box-sizing: border-box;
+}
+.button-tool-pathgriho {
+    border-radius: 20px;
+    padding:18px;
+    background-color: rgb(253, 17, 57);
+    color: white;
+    font-size: 15px;
+    
+    
+}
+.button-tool-pathgriho:hover {
+    background-color: rgb(10, 206, 206);
+    color: black;
+}
+.pathgriho-box {
+    width: 60%;
+    height: 32px;
+    border-radius: 15px;
+}
+        </style>
+        
+      
+
+        <div  style="text-align: center;">
+            <form name="circle">
+                <h2>Celsius To Fahrenheit</h2>
+                <br/>
+                <input class="pathgriho-box" type="text" name="radius" placeholder="Enter the Celsius Value" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="button" value="Convert to Fahrenheit" onClick="calculateAC()"><br /><br/>        
+                <input type="text" name="acc" class="pathgriho-box" placeholder="Fahrenheit Value is here" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="reset" value="Try Another One" />
+                <br/><br/>
+            
+            </form>
+            <form name="ck">
+                <h2>Celsius to Kelvin</h2>
+                <br/>
+                <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Celsius value" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="button" value="Convert to Kelvin" onClick="calculateCK()"><br /><br/>
+                <input type="text" name="adc" class="pathgriho-box" placeholder="Kelvin value is here" size="20"><br /><br/>
+                <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
+                <br/><br/>
+            </form>
+            <form name="fc">
+                <h2>Fahrenheit to Celsius</h2>
+                <br/>
+                <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Value at Fahrenheit" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="button" value="Convert to Celsius" onClick="calculateFC()"><br /><br/>
+                <input type="text" name="accc" class="pathgriho-box" placeholder="Celsius value is here" size="20"><br /><br/>
+                <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
+                <br/><br/>
+            </form>
+            <form name="fk">
+                <h2>Fahrenheit to Kelvin</h2>
+                <br/>
+                <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Fahrenheit Value" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="button" value="Convert to Kelvin" onClick="calculateFK()"><br /><br/>
+                <input type="text" name="ad" class="pathgriho-box" placeholder="Kelvin value is here" size="20"><br /><br/>
+                <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
+                <br/><br/>
+            </form>
+            <form name="kc">
+                <h2>Kelvin to Celsius</h2>
+                <br/>
+                <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Kelvin Value" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="button" value="Convert to Celsius" onClick="calculateKC()"><br /><br/>
+                <input type="text" name="rabiul" class="pathgriho-box" placeholder="Celsius value is here" size="20"><br /><br/>
+                <input class="button-tool-pathgriho"  type="reset" value="Try Another One" />
+                <br/><br/>
+            </form>
+            <form name="kf">
+                <h2>Kelvin to Fahrenheit</h2>
+                <br/>
+                <input type="text" name="fahrenh" class="pathgriho-box" placeholder="Enter the Kelvin Value" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="button" value="Convert to Fahrenheit" onClick="calculateKF()"><br /><br/>
+                <input type="text" name="roko" class="pathgriho-box" placeholder="Fahrenheit value is here" size="20"><br /><br/>
+                <input class="button-tool-pathgriho" type="reset" value="Try Another One" />
+                <br/><br/>
+            </form>
+            </div>
+        
+        <script>
+        function calculateAC() {
+    var radius = document.circle.radius.value;
+    var unit = " degree Fahrenheit"
+   
+    var finalAC = (radius*1.8)+32;
+    
+    document.circle.acc.value = (finalAC.toFixed(2)+unit);
+
+    }
+
+    function calculateFK() {
+        var fahrenh = document.fk.fahrenh.value;
+        var unit = " Kelvin"
+        var con = 32
+        
+        var finalACC = ((fahrenh-32)/1.8)+273.15;
+        
+        document.fk.ad.value = (finalACC.toFixed(2)+unit);
+    
+    }
+    function calculateFC() {
+        var fahrenh = document.fc.fahrenh.value;
+        var unit = " Kelvin"
+        var con = 32
+        var finalACC = (fahrenh-con)/1.8;
+        
+        document.fc.accc.value = (finalACC.toFixed(2)+unit);
+    
+    }
+    function calculateCK() {
+        var fahrenh = document.ck.fahrenh.value;
+        var unit = " Kelvin"
+        var con = 273.15
+        var finalACC = (fahrenh*1)+con;
+        
+        document.ck.adc.value = (finalACC.toFixed(2)+unit);
+    
+    }
+
+        </script>
+</html>
